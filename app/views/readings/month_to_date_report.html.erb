@@ -1,0 +1,15 @@
+<div class="page-header">
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Month to date report</h2>
+		</div>
+	</div>
+</div>
+<%= form_tag report_readings_path, method: :get do %>
+	<div class="form-group">
+		<label>Month to date</label>
+		<%= date_select "reading","created_at" %>
+		<%= hidden_field_tag :type, 2%>
+	</div>
+	<%= submit_tag "Submit", class: "btn btn-default" %>
+<% end %>

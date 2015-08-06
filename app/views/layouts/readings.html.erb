@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sweety</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render "layouts/header" %>
+	<div class="container top_container">
+		<% if flash[:notice] %>
+			<div class="alert alert-info" role="alert">
+      			<%= flash[:notice]%>
+    		</div
+    	<% end %>	
+		<%= render "readings/today_readings" %>
+		<%= yield %>
+	</div>	
+</body>
+</html>

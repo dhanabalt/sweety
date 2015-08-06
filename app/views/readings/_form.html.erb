@@ -1,0 +1,10 @@
+<%= form_for @reading,html: {class: "col-md-6"} do |f| %>
+	<div class="form-group">
+		<label>Glucose level</label>
+		<%= f.number_field :glucose_level,class: "form-control" %>
+		<% if @reading.errors["glucose_level"].present? %>
+			<p class="alert alert-danger"><%= @reading.errors["glucose_level"][0] %></p>
+		<% end %>	
+	</div>
+	<%= f.submit class: "btn btn-default" %>
+<% end %>

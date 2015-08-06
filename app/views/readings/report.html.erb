@@ -1,0 +1,33 @@
+<div class="page-header">
+	<div class="row">
+		<div class="col-md-8">
+			<h2><%= @readings[:title] %></h2>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Data Point</th>
+                <th>Glucose Level</th>
+              </tr>
+            </thead>
+            <tbody>
+				<tr>
+					<td>Minimum</td>
+					<td><%= @readings[:minimum] %></td>
+				</tr>
+				<tr>
+					<td>Maximum</td>
+					<td><%= @readings[:maximum] %></td>
+				</tr>
+				<tr>
+					<td>Average</td>
+					<td><%= @readings[:average] %></td>
+				</tr>
+            </tbody>
+          </table>
+	</div>
+</div>
